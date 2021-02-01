@@ -10,17 +10,16 @@
       </ul>
     </div>
   <% end %>
-<div class="row center">
+<div class="row">
 
-
-   <div class="input-field col s6">
+   <div class="row col s6">
     <%= form.label :title %>
-    <%= form.text_area :title %>
+    <%= form.text_area :title, class:"input-field" %>
   </div>
-  <div class="row">
-      <div class="input-field col s12">
+  <div class="row  col s9">
+      <div>
         <%= form.label :body %>
-        <%= form.text_field :body %>
+        <%= form.text_field :body, class:"input-field" %>
   </div>
   
   </div>
@@ -33,4 +32,5 @@
 
 
 </div>
+  
   
