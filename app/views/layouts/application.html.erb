@@ -10,6 +10,19 @@
   </head>
 
   <body>
+  <Header class="col s12">
+
+    <div>
+         <nav>
+            <ul>
+               <li><%=  link_to 'Home', "/" %></li>
+               <li><%= link_to "BLog", articles_path %></li>
+
+            </ul>
+         </nav>
+    </div>
+  </header>
+     
     <%= yield %>
   </body>
 </html>

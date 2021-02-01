@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "materialize";
+ @import "materialize/components/color-variables";
+ @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+ $primary-color: color("blue", "lighten-2") !default;
+ $secondary-color: color("yellow", "base") !default;
+
+body{
+    padding: 0;
+    margin: 0;
+}
