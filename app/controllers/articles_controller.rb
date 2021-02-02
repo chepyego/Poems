@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
-
+   http_basic_authenticate_with name: "jemimah", password: "jemimah21", execept: [:index, :show]
+   http_basic_authenticate_with name: "jemimah", password: "jemimah21", only: :destroy
   # GET /articles or /articles.json
   def index
     @articles = Article.all
