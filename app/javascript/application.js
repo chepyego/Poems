@@ -5,6 +5,3 @@
 //require("channels")
 //require("jquery")
 
-$(document).ready(function(){
-      $('.sidenav-trigger').sidenav();
-})
