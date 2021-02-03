@@ -1,16 +1,15 @@
-<p id="notice"><%= notice %></p>
- <div class="center">
+<div class="container">
  
      <p>
       <strong>Title:</strong>
       <%= @article.title %>
   </p>
 
-   <p>
-       <%= @article.image %>
-       <caption>@article.title</caption>
+   <div style="width: 400px; height:auto">
+        <%= image_tag @article.image %>
+       
    
-   </p>
+   </div>
 
     <p>
       <strong>Body:</strong>
@@ -24,11 +23,15 @@
  </div>
  
     
-      <span><h5>Comments</h5></span>
+      <div>
          <%= render @article.comments %>
-
-  <h5>Add comment:</h5>
+      </div>
+  <div class="center-align">
+  
 
   <%= render '/comments/form' %>
+  </div>
+
+  </div>
   
   

@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'pages/home'
   get 'pages/Blog'
-  resources :articles do
-    resources :comments
+
+  # scope '(:locale)' do
+    resources :articles do
+      resources :comments
+
+  # end
 
   end
   #  get 'articles/show'

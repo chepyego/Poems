@@ -2,30 +2,11 @@
 
 <h1 class="center">Articles</h1>
 
+
+
+
+
 <div class="container">
-  <% @articles.each do |article| %>
-      <div class="divider">
-       <div class="section">
-        <h3><%= article.title %></h3>
-
-       </div>
-
-      </div>
-      <div class="divider">
-        <div class="section">
-            <p><%= article.body %></p>
-
-        </div>
-
-      
-      </div>
-
-
-  <% end %>
-
-
-</div>
-
 <table>
   <thead>
     <tr>
@@ -49,5 +30,9 @@
 </table>
 
 <br>
+   <%= link_to 'New Article', new_article_path %>
 
-<%= link_to 'New Article', new_article_path %>
+</div>
+
+
+
