@@ -28,3 +28,7 @@ body{
 ul{
     padding: 20px;
 }
+
+body{
+    @extend .deep-purple, .lighten-4;
+}

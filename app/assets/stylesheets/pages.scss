@@ -1,3 +1,18 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container img{
+    
+    object-fit: cover;
+    padding-top: 20px;
+    position: relative;
+    margin: 3%;
+}
+.first-txt { 
+    position: absolute; 
+    top: 200px; 
+    left: 50px;
+    color: white; 
+    margin-left: 150px;
+} 

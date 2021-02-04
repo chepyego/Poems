@@ -5,3 +5,14 @@
 //require("channels")
 //require("jquery")
 
+
+window.addEventListener("load", () =>{
+    const links = document.querySelectorAll("a[data-remote]");
+    links.forEach((element) =>{
+
+        Element.addEventListener("ajax:success", ()=>{
+            alert("The article was deleted");
+    });
+    
+    });
+});
