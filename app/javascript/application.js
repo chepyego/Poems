@@ -5,6 +5,8 @@
 //require("channels")
 //require("jquery")
 
+import 'materialize-css/dist/js/materialize'
+
 
 window.addEventListener("load", () =>{
     const links = document.querySelectorAll("a[data-remote]");

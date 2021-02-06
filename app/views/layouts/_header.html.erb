@@ -1,20 +1,19 @@
 <div>
-         <nav class="nav-wrapper">
-         <div class="container">
-           <a href="#" class="brand-logo left">Logo</a>
-           <a href="#" class="sidenav-trigger" data_target="mobile-links">
-            <i class="material-icons">menu</i>
-           </a>
-            <ul class="right hide-on-med-and-down">
-               <li><%=  link_to 'Home', "/" %></li>
-               <li><%= link_to "BLog", articles_index_path %></li>
+  <nav class="nav-wrapper">
+    <div class="container">
+      <a href="#" class="brand-logo left">Logo</a>
+        <a href="#" data-target="mobile-links" class="sidenav-trigger right">
+        <i class="material-icons">menu</i>
+        </a>
 
-            </ul>
-            </div>
-         </nav>
-         <ul class="sidenav" id= "mobile-links">
-            <li><%=  link_to 'Home', "/" %></li>
-               <li><%= link_to "BLog", articles_path %></li>
-         
-         </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><%=  link_to 'Home', "/" %></li>
+        <li><%= link_to "BLog", articles_index_path %></li>
+      </ul>
     </div>
+  </nav>
+  <ul class="sidenav right" id="mobile-links">
+    <li><%=  link_to 'Home', "/" %></li>
+    <li><%= link_to "BLog", articles_path %></li>
+  </ul>
+</div>
