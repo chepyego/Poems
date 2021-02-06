@@ -2,32 +2,22 @@
 
 <h1 class="center">Articles</h1>
 
-
-
-
 <div class="container">
-
-<% @articles.each do |article| %>
-    <h3><%= article.title %></h3>
-    <p><%= article.body %></p>
-
-    <p><%= link_to 'Read', article %></p>
-    <p><%= link_to 'Edit', edit_article_path(article) %></p>
-    <p><%= link_to 'Destroy', article, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></p>
- 
-    
-    <div id="new-div">
-          <%= link_to 'New Article', new_article_path %>
-     </div>
-
-
-<% end %>
-     
-
- 
-
-
-
-
-
+  <% @articles.each do |article| %>
+    <div class="row">
+      <div class="col col s12 l6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <h3 class="card-title"><%= article.title %></h3>
+            <p><%= article.body %></p>
+            <p><%= link_to 'Read', article %></p>
+            <p><%= link_to 'Edit', edit_article_path(article) %></p>
+            <p><%= link_to 'Destroy', article, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <div id="new-div">
+              <%= link_to 'New Article', new_article_path %>
+          </div>
+        </div>
+      </div>
+    </div>  
+  <% end %>
 </div>
