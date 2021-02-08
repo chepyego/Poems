@@ -15,8 +15,12 @@
     <header>
       <%= render 'layouts/header'%>
     </header>
-  
-    
+      <% if notice %>
+      <p class="alert-success"><%= notice%></p>
+       <% end %>
+      <% if notice %>
+       <p class="alert-success"><%= alert %></p>
+      <% end %>
     <%= yield %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

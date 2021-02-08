@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1 class="center">Articles</h1>
 
@@ -10,11 +10,11 @@
           <div class="card-content white-text">
             <h3 class="card-title"><%= article.title %></h3>
             <p><%= article.body %></p>
-            <p><%= link_to 'Read', article %></p>
-            <p><%= link_to 'Edit', edit_article_path(article) %></p>
-            <p><%= link_to 'Destroy', article, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
+            <p><%= link_to 'Edit', edit_article_path(article), class:"black-text" %></p>
+            <p><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "blue-text" %></p>
             <div id="new-div">
-              <%= link_to 'New Article', new_article_path %>
+              <%= link_to 'New Article', new_article_path, class:"btn-floating btn-large waves-effect waves-light red" %>
           </div>
         </div>
       </div>
