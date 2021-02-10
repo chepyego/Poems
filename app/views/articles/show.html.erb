@@ -1,20 +1,16 @@
 <div class="container">
  
-     <p>
-      <strong>Title:</strong>
-      <%= @article.title %>
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
   </p>
-
-   <div style="width: 400px; height:auto">
-        <%= image_tag @article.image %>
-       
-   
-   </div>
-
-    <p>
-      <strong>Body:</strong>
-      <%= @article.body %>
-    </p>
+  <div style="width: 400px; height:auto">
+    <%= image_tag @article.image if @article.image.attached? %>
+  </div>
+  <p>
+    <strong>Body:</strong>
+    <%= @article.body %>
+  </p>
 
 
     <%= link_to 'Edit', edit_article_path(@article) %> |

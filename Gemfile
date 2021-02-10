@@ -34,8 +34,14 @@ gem 'materialize-sass', '~> 1.0.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
+  #The Rspec testing framework
   gem 'rspec-rails'
+  #Capybara, the library that allow us to interact with the browser
+  gem 'capybara'
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  gem 'webdrivers'
+
 end
 
 group :development do
