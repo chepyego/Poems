@@ -10,46 +10,40 @@
           </ul>
         </div>
       <% end %>
+        <div class="container">
+          <div class="row">
+            <div class="col s9 l9 center-align"> 
+              <div class="input-field">
+                <%= form.label :title %>
+                <%= form.text_area :title %>
+              </div>
 
+              <div class="input-field">
+                <%= form.label :body %>
+                <%= form.text_field :body, class:"text-area col s12" %>
+              </div>
 
-      <div class="container">
-        <div class="row">
-        <div class="col s9 center-align">
-            
-          <div>
-            <%= form.label :title %>
-            <%= form.text_area :title %>
-        </div>
+              <div>
+                <% if @article.image.attached? %>
+                <%= image_tag @article.image %>
+                <% end %>
+              </div> 
 
-          <div class="input-field">
-            <%= form.label :body %>
-            <%= form.text_field :body, class:"text-area col s12" %>
-          </div>
+              <div>
+                <%= form.label :image %>
+                <%= form.file_field :image  %><br>
+              </div>
 
-          <div>
-            <% if @article.image.attached? %>
-            <%= image_tag @article.image %>
-            <% end %>
-          </div> 
-
-          <div>
-            <%= form.label :image %>
-            <%= form.file_field :image  %><br>
-          </div>
-
-          
-      
-
-            <div class="btn waves-effect waves-light">
-              <%= form.submit  %>
+              <div class="btn waves-effect waves-light">
+                <%= form.submit  %>
+              </div>
             </div>
-    
-    <% end %>
+          </div> 
+        </div>
+        
+<% end %>
 
-     </div>
-  
-    </div>
-  </div>
+     
 
   
 

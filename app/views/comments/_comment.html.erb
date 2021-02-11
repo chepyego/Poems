@@ -1,26 +1,21 @@
 <% @article.comments.each do |comment| %>
-
-
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="row">
       <div class="col s6 center-align">
-      <h5>Comments</h5>
-    <p>
-        <strong>User:</strong>
-        <%= comment.user%>
-    </p>
-
-    <p>
-      <strong>Comment</strong>
-      <%= comment.body %>
-    </p>
-    
-    <P>
-      <%= link_to 'Destroy comment', [comment.article, comment],
-          method: :delete, data: {confirm: "are you sure you want to delete?" } %>
-    </P>
-    
+        <h5>Comments</h5>
+        <p>
+          <strong>User:</strong>
+          <%= comment.user%>
+        </p>
+        <p>
+          <strong>Comment</strong>
+          <%= comment.body %>
+        </p>
+        <P>
+          <%= link_to 'Destroy comment', [comment.article, comment],
+              method: :delete, data: {confirm: "are you sure you want to delete?" } %>
+        </P>
+      </div>
     </div>
-    </div>
-    </div>
- <% end %>
+  </div>
+<% end %>

@@ -1,22 +1,21 @@
 
   <nav class="nav-wrapper">
     <div class="container">
-      <a href="#" class="brand-logo left">Logo</a>
+        <a href="#" class="brand-logo left">Logo</a>
         <a href="#" data-target="mobile-links" class="sidenav-trigger right">
         <i class="material-icons">menu</i>
         </a>
-
-      <ul class="right hide-on-med-and-down">
-        <li><%=  link_to 'Home', "/" %></li>
-        <li><%= link_to "BLog", articles_index_path %></li>
-        <% if user_signed_in? %>
-        Logged in as  <strong><%= current_user.email %></strong>
-        <li><%=  link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-        <% else %>
-        <li><%=  link_to 'Login', new_user_session_path %></li>
-        <li><%=  link_to 'sign up', new_user_registration_path %></li>
-        <% end %>
-      </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><%=  link_to 'Home', "/" %></li>
+            <li><%= link_to "BLog", articles_index_path %></li>
+            <% if user_signed_in? %>
+              Logged in as  <strong><%= current_user.email %></strong>
+              <li><%=  link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%=  link_to 'Login', new_user_session_path %></li>
+                <li><%=  link_to 'sign up', new_user_registration_path %></li>
+            <% end %>
+          </ul>
     </div>
   </nav>
   <ul class="sidenav right" id="mobile-links">

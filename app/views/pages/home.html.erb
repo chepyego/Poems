@@ -1,88 +1,77 @@
 
-<div>
+<%= image_tag "3.jpg", style: "width: 100%" %>
+  <div class="center">
+    <span class="circle">
+      <a href="facebook.com"><i class="material-icons align-center" >facebook</i>fb</a>
+      <a href="https://twitter.com/home"><i class="material-icons social">twitter</i>twitter</a>
+      <a href="instagram.com"><i class="material-icons social">instagram</i>instagram</a>
+    </span>
+  </div>
+    <h3 class="first-txt">GeeksforGeeks<h3>
+    <h6 class="first-txt">The world needs some kind people! so be one today  </h6>
+    <p><%= t ('welcome')%></p>
+    <p><%=  t ('services_html') %></p>
+    <h6 class="center black-text"> Some of the famous poems from our collections are shown below</h6>
 
-   <div class="row">
+<div class="row">
+  <div class="col s12 l4 offset-l2">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag "1.jpg", class: "activator"%>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">A better me<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+        <button class="btn3">Read more</button>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-black text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p class="grey-text" id="pone">
+          I am not proud of some of the things I have done
+          To get to where I am
+          I am not perfect, not even close
+          I am perfectly flawed and human
+          I have done alot of mistakes in the past
+          Some of which I did knowingly 
+          While I knew not of the others
+          And I am not proud of that 
 
-    <div class="col s12">
-            
-            <%= image_tag "3.jpg", style: "width: 100%" %>
+          I seek forgiveness to those that I've wronged 
+          At the time I did what I thought best
+          I seek forgiveness to the ones that I've hurt
+          I am really sorry and I hope we live past this
+          I beseech all those that I have had a hand on their suffering
+          I wish I could turn back time and do the right thing
 
-              <div class="center">
-               <span class="circle">
-              <a href="facebook.com"><i class="material-icons align-center" >facebook</i>fb</a>
-              <a href="https://twitter.com/home"><i class="material-icons social">twitter</i>twitter</a>
-               <a href="instagram.com"><i class="material-icons social">instagram</i>instagram</a>
-               </span>
-            </div>
-            <h3 class="first-txt">GeeksforGeeks<h3>
-            <h6 class="first-txt">The world needs some kind people! so be one today  </h6>
+          I also have ungodly habits
+          That I am trying to let go of
+          It's not easy, it never is
+          Because I keep stumbling everyday
+          But I am not giving up.
 
-        
+          I want to rewrite the stars
+          Then do things right this time
+          I want to become better, a better me
 
-    <div>
-       <p><%= t ('welcome')%></p>
-       <p><%=  t ('services_html') %></p>
-      <h6 class="center black-text"> Some of the famous poems from our collections are shown below</h6>
-     </div>
-
-
-<div class="col s12 l4 offset-l2">
-  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <%= image_tag "1.jpg", class: "activator"%>
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">A better me<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-      <button class="btn3">Read more</button>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-black text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p class="grey-text" id="pone">
-        I am not proud of some of the things I have done
-        To get to where I am
-        I am not perfect, not even close
-        I am perfectly flawed and human
-        I have done alot of mistakes in the past
-        Some of which I did knowingly 
-        While I knew not of the others
-        And I am not proud of that 
-
-        I seek forgiveness to those that I've wronged 
-        At the time I did what I thought best
-        I seek forgiveness to the ones that I've hurt
-        I am really sorry and I hope we live past this
-        I beseech all those that I have had a hand on their suffering
-        I wish I could turn back time and do the right thing
-
-        I also have ungodly habits
-        That I am trying to let go of
-        It's not easy, it never is
-        Because I keep stumbling everyday
-        But I am not giving up.
-
-        I want to rewrite the stars
-        Then do things right this time
-        I want to become better, a better me
-
-        Prince Diaries
-      </p>
+          Prince Diaries
+        </p>
+      </div>
     </div>
   </div>
-</div>
-<%# last %>
-<div class="col s12 l4">
-  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <%= image_tag "2.jpg", class: "activator" %>
+
+    <div class="col s12 l4">
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <%= image_tag "2.jpg", class: "activator" %>
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+          <p id="p2"><a href="#">Read more</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">A better me<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
     </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p id="p2"><a href="#">Read more</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">A better me<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div>
 </div>
