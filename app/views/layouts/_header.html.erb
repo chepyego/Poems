@@ -15,7 +15,13 @@
                 <li><%=  link_to 'Login', new_user_session_path %></li>
                 <li><%=  link_to 'sign up', new_user_registration_path %></li>
             <% end %>
+              <a class="dropdown-trigger btn-small" href="#" data-target="dropdown1">Language</a>
+                <div id="dropdown1" class="dropdown-content">
+                  <li><%= link_to 'English', root_path(locale: :en) %></li>
+                  <li><%= link_to 'French', root_path(locale: :fr) %></li>
+                </div>
           </ul>
+          
     </div>
   </nav>
   <ul class="sidenav right" id="mobile-links">

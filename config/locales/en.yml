@@ -1,4 +1,10 @@
 en:
+  activerecord:
+    attributes:
+      article:
+        title:  "title"
+        body: "body"
+      
   pages:
     home:
       text: "Some of the famous poems from our collections are shown below"

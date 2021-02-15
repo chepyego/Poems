@@ -1,5 +1,10 @@
 fr:
+  activerecord:
+    attributes:
+      article:
+      title:  "Titre"
+      body: "corps"
   pages:
     home:
       text: "Certains des poèmes célèbres de nos collections sont présentés ci-dessous"
-    
+  
