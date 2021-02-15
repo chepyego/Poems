@@ -16,7 +16,7 @@ RSpec.describe 'User login', type: feature do
     end
 
     def login_with(email, password)
-        visit login_path
+        visit root_path
         fill_in "Email",	with: email
         fill_in "password", with: password 
         click_button 'login'

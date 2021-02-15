@@ -1,3 +1,5 @@
 fr:
-    welcome:  "Bienvenue"
-    services_html: "Nous fournissons des services sophistiqués aux bonnes personnes"
+  pages:
+    home:
+      text: "Certains des poèmes célèbres de nos collections sont présentés ci-dessous"
+    
