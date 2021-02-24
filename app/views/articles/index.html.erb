@@ -14,7 +14,7 @@
                     <span class="button3">
                     <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
                     <p><%= link_to 'Edit', edit_article_path(article), class:" btn waves-effect waves-light white-text black-text" %></p>
-                    <p><%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn waves-effect waves-light white-text blue-text" %></p>
+                    <p><%= link_to 'Delete', article,remote:true,  method: :delete, data: { confirm: 'Are you sure?' }, class: "btn waves-effect waves-light white-text blue-text", id: "delete1" %></p>
                     <div id="new-div">
                       <%= link_to 'New Article', new_article_path, class:"btn-floating btn-small waves-effect waves-light red" %>
                     </span>

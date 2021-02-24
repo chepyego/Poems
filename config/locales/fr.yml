@@ -1,9 +1,17 @@
 fr:
+  helpers:
+    label:
+      article:
+        title: "Titre"
   activerecord:
     attributes:
       article:
-      title:  "Titre"
-      body: "corps"
+        title:  "Titre"
+        body: "corps"
+      comment:
+        user: "utilisateur"
+        body: "corps"
+      
   pages:
     home:
       text: "Certains des poèmes célèbres de nos collections sont présentés ci-dessous"

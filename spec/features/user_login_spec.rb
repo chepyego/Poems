@@ -1,6 +1,10 @@
-require 'rails_helper'
-RSpec.describe 'User login', type: feature do
+# require 'rails_helper'
+require 'spec_helper'
+
+RSpec.describe 'User login', type: :feature do
     scenario 'with valid email and password' do
+        visit user_session_path
+        
         login_with 'valid@example.com', 'password'
         
         expect(page).to have_content('logout')
@@ -17,7 +21,7 @@ RSpec.describe 'User login', type: feature do
 
     def login_with(email, password)
         visit root_path
-        fill_in "Email",	with: email
+        fill_in "email",	with: email
         fill_in "password", with: password 
         click_button 'login'
     end

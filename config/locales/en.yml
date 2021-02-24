@@ -1,8 +1,14 @@
 en:
+  helpers:
+    label:
+      article:
+        title: "title"
   activerecord:
     attributes:
       article:
         title:  "title"
+        body: "body"
+      comment:
         body: "body"
       
   pages:
