@@ -41,6 +41,8 @@ group :development, :test do
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
   gem 'webdrivers'
+  gem 'factory_bot_rails'
+
 
 end
 
@@ -52,6 +54,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rspec-rails'
+  
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

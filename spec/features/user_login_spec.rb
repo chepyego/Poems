@@ -1,29 +1,52 @@
 # require 'rails_helper'
-require 'spec_helper'
+# require 'spec_helper'
 
-RSpec.describe 'User login', type: :feature do
-    scenario 'with valid email and password' do
-        visit user_session_path
+RSpec.describe " user login ", type: :feature do
+    scenario "with correct password and email" do
+        visit new_user_session_path
+        @user = create(:user)
+
+        fill_in 'user_email', with: 'test@example.com'
+        fill_in 'user_password', with: 'password1'
+        click_button 'Log in'
+
         
-        login_with 'valid@example.com', 'password'
+        expect(page).to have_content("Signed in successfully.")
         
-        expect(page).to have_content('logout')
+
+
     end
 
-    scenario 'with invalid email' do
-        login_with 'inavalid_email', 'password'
-        expect(page).to have_content('sign in')
-    end
-    scenario 'with invalid password' do
-        login_with 'valid@example.com','invalid_password' 
-        expect(page).to have_content('sign in')
+    scenario "with wrong password and correct email" do
+        visit new_user_session_path
+        @user = create(:user)
+        fill_in 'user_email', with: 'test@example.com'
+        fill_in 'user_password', with: 'jemimah21'
+
+        click_button 'Log in'
+
+        expect(page).to have_content("Forgot your password?")
     end
 
-    def login_with(email, password)
-        visit root_path
-        fill_in "email",	with: email
-        fill_in "password", with: password 
-        click_button 'login'
+    scenario "with wrong password and wrong email" do
+        visit new_user_session_path
+        @user = create(:user)
+        fill_in 'user_email', with: 'jem@example.com'
+        fill_in 'user_password', with: 'jemimah21'
+
+        click_button 'Log in'
+
+        expect(page).to have_content("Sign up")
     end
+
+
+
+        
+
+
+
+
+   
+
 
 end
