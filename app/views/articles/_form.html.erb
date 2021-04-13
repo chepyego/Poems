@@ -1,4 +1,5 @@
-<%= form_with(model: article, local: true) do |form| %>
+<div id="formone">
+  <%= form_with(model: article, remote: true) do |form| %>
       <% if article.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -12,7 +13,7 @@
       <% end %>
         <div class="container">
           <div class="row">
-            <div class="col s9 l9 center-align"> 
+            <div class="col s9 l9 center-align">
               <div class="input-field">
                 <%= form.label :title, class: "black-text" %>
                 <%= form.text_area :title %>
@@ -27,7 +28,7 @@
                 <% if @article.image.attached? %>
                 <%= image_tag @article.image %>
                 <% end %>
-              </div> 
+              </div>
 
               <div>
                 <%= form.label :image %>
@@ -38,16 +39,9 @@
                 <%= form.submit  %>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
-        
+
 <% end %>
 
-     
-
-  
-
-
-
-  
-  
+</div>

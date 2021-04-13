@@ -3,4 +3,10 @@
 
 }); %>
 
-alert('huhuhu  i made an ajax request');
+<%# alert('huhuhu  i made an ajax request'); %>
+$(document).ready(function(){
+    $("#delete1").bind('ajax:success',function(){
+        $(this).closest("<% @articles.id %>").remove();
+    });
+
+});
