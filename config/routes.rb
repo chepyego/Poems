@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :comments
     
    end
+   resources :contacts, only: [:new, :create]
   end
 
   # end

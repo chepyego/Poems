@@ -5,22 +5,27 @@
 <div class="container">
   <% @articles.each do |article| %>
     <div class="row">
-      <div class="col col s12 l12">
+      <div class="col  s12 m6 l10">
         <div class="card blue-grey darken-1">
           <div class="card-content white-text">
             <h3 class="card-title"><%= article.title %></h3>
-                  <p><%= article.body %></p>
-                  <% if user_signed_in? %>
-                    <span class="button3">
-                    <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
-                    <p><%= link_to 'Edit', edit_article_path(article), class:" btn waves-effect waves-light white-text black-text" %></p>
-                    <p><%= link_to 'Delete', article,remote:true,  method: :delete, data: { confirm: 'Are you sure?' }, class: "btn waves-effect waves-light white-text blue-text", id: "delete1" %></p>
-                    <div id="new-div">
-                      <%= link_to 'New Article', new_article_path, class:"btn-floating btn-small waves-effect waves-light red" %>
-                    </span>
-                    </div>
-                    <% else %>
+                <ul>
+                  <li>
+                      <p><%= article.body %></p>
+                      
+                    <% if user_signed_in? %>
+                      <span class="button3">
                       <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
+                      <p><%= link_to 'Edit', edit_article_path(article), class:" btn waves-effect waves-light white-text black-text" %></p>
+                      <p><%= link_to 'Delete', article,remote:true,  method: :delete, data: { confirm: 'Are you sure?' }, class: "btn waves-effect waves-light white-text blue-text", id: "delete1" %></p>
+                      <div id="new-div">
+                        <%= link_to 'New Article', new_article_path, class:"btn-floating btn-small waves-effect waves-light red" %>
+                      </span>
+                      </div>
+                      <% else %>
+                        <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
+                  </li>
+                </ul>
                   <% end %>
           </div>
         </div>

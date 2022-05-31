@@ -110,6 +110,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mail_form (1.9.0)
+      actionmailer (>= 5.2)
+      activemodel (>= 5.2)
     marcel (1.0.0)
     materialize-sass (1.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -255,6 +258,7 @@ DEPENDENCIES
   i18n-debug
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  mail_form
   materialize-sass (~> 1.0.0)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)

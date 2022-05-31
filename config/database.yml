@@ -27,8 +27,8 @@ development:
 
   database: blog_development
   host: localhost
-  username: blog
-  password: jemimah21
+  username: postgres
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -66,8 +66,10 @@ test:
   encoding: unicode
   
   database: blog_test
-  username: blog
-  password: jemimah21
+  host: localhost
+
+  username: postgres
+  password: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -91,6 +93,6 @@ test:
 production:
   <<: *default
   database: blog_production
-  username: blog
+  username: postgres
   password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
   # password: jemimah21;
