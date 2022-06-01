@@ -1,6 +1,8 @@
 fr:
   helpers:
     label:
+      comment:
+        user: "utilisateur"
       article:
         title: "Titre"
   activerecord:

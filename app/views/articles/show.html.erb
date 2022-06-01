@@ -1,17 +1,16 @@
-<div class="container">
+<div class="container center">
   <p>
-    <strong>Title:</strong>
+    <strong></strong>
     <%= @article.title %>
   </p>
-  <div style="width: 400px; height:auto">
+  <div class="image-one">
     <%= image_tag @article.image if @article.image.attached? %>
   </div>
-  <p>
-    <strong>Body:</strong>
+  <p class="center">
+    <strong></strong>
     <%= @article.body %>
   </p>
-    <%= link_to 'Edit', edit_article_path(@article) %> |
-    <%= link_to 'Back', articles_path %>
+    
       <div>
          <%= render @article.comments %>
       </div>
