@@ -1,4 +1,3 @@
-<div id="formone">
   <%= form_with(model: article, remote: true) do |form| %>
       <% if article.errors.any? %>
         <div id="error_explanation">
@@ -13,35 +12,31 @@
       <% end %>
         <div class="container">
           <div class="row">
-            <div class="col s9 l9 center-align">
-              <div class="input-field">
+              <div class="input-field col s12">
                 <%= form.label :title, class: "black-text" %>
-                <%= form.text_area :title %>
+                <%= form.text_field :title %>
               </div>
+          </div>
 
-              <div class="input-field">
+            <div class="row">
+              <div class="input-field col s12">
                 <%= form.label :body, class:"black-text" %>
-                <%= form.text_field :body, class:"text-area col s12" %>
-              </div>
-
+                <%= form.text_area :body, class:"text-area col s12" %>
+            </div>
+            </div>
+              <div class="row">
+                <div class="col s12">
+                  <% if @article.image.attached? %><br>
+                  <%= image_tag @article.image %>
+                  <% end %>
+                </div>
+              </div>  
               <div>
-                <% if @article.image.attached? %>
-                <%= image_tag @article.image %>
-                <% end %>
+                  <%= form.label :image %><br>
+                  <%= form.file_field :image  %><br><br>
               </div>
-
-              <div>
-                <%= form.label :image %>
-                <%= form.file_field :image  %><br>
-              </div>
-
-              <div class="btn waves-effect waves-light">
+              <div class="btn waves-effect waves-light round">
                 <%= form.submit  %>
               </div>
-            </div>
-          </div>
         </div>
-
-<% end %>
-
-</div>
+      <% end %>

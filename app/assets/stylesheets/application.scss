@@ -26,6 +26,7 @@ body{
     margin: 0;
     font-family: monospace;
     padding: 20px;
+    
 
     
 }
@@ -35,4 +36,9 @@ ul{
 
 body{
     @extend .deep-purple, .lighten-4;
+}
+/* label focus color */
+
+.input-field input[type=text]:focus + label {
+    color: #000;
 }

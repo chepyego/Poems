@@ -1,7 +1,4 @@
-
-
-<h1 class="center">Articles</h1>
-
+<h4 class="center">Articles</h4>
 <div class="container">
   <% @articles.each do |article| %>
     <div class="row">
@@ -11,8 +8,9 @@
             <h3 class="card-title"><%= article.title %></h3>
                 <ul>
                   <li>
-                      <p><%= article.body %></p>
-                      
+                      <div class="poem">
+                        <p><%= article.body %></p>
+                      </div>
                     <% if user_signed_in? %>
                       <span class="button3">
                       <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
@@ -24,9 +22,10 @@
                       </div>
                       <% else %>
                         <p class="button"><%= link_to 'Read', article, class:"btn waves-effect waves-light white-text" %></p>
+                    <% end %>
+
                   </li>
                 </ul>
-                  <% end %>
           </div>
         </div>
       </div> 
