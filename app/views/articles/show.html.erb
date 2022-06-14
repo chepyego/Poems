@@ -6,10 +6,14 @@
   <div class="image-one">
     <%= image_tag @article.image if @article.image.attached? %>
   </div>
-  <p class="center">
+  <p  id="content1" class="center article">
     <strong></strong>
     <%= @article.body %>
   </p>
+  <p id="author" class="para"></p>
+
+  <br>
+  <div id="read-more"class="waves-effect waves-light btn center-align center rounded">Read more</div>
     
       <div>
          <%= render @article.comments %>
